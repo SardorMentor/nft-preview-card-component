@@ -1,0 +1,126 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0d192b;
+}
+
+.card {
+  font-size: 15px;
+  font-weight: 300;
+  color: #8bacda;
+  max-width: 350px;
+  margin: 62px 24px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.card .wrapper {
+  padding: 24px;
+  background-color: #14253d;
+}
+.card-image {
+  position: relative;
+  overflow: hidden;
+  background-color: #00fff7;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  transition: all 200ms ease-in-out;
+}
+.card-image .equ {
+  display: block;
+  width: 100%;
+  transition: all 200ms ease-in-out;
+}
+.card-image .view {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 200ms ease-in-out;
+}
+.card-image:hover {
+  cursor: pointer;
+}
+.card-image:hover .view {
+  visibility: visible;
+}
+.card-image:hover .equ {
+  opacity: 0.6;
+}
+.card-title {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 12px;
+  transition: all 200ms ease-in-out;
+}
+.card-title:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+.card-description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #2f415b;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+.card-info img {
+  margin-right: 7px;
+}
+.card-amount {
+  display: flex;
+  align-items: center;
+}
+.card-amount p {
+  font-weight: 600;
+  color: #00fff7;
+}
+.card-days-left {
+  display: flex;
+  align-items: center;
+}
+.card-creator {
+  display: flex;
+  align-items: center;
+}
+.card-creator img {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: 16px;
+}
+.card-creator h3 {
+  font-size: 15px;
+  font-weight: 300;
+}
+.card-creator h3 span {
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+.card-creator h3 span:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */

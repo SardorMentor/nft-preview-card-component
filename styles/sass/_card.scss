@@ -1,0 +1,124 @@
+.card {
+  font-size: 15px;
+  font-weight: 300;
+  color: $softBlue;
+  max-width: 350px;
+  margin: 62px 24px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  .wrapper {
+    padding: 24px;
+    background-color: $veryDarkBlueCardBG;
+  }
+
+  &-image {
+    position: relative;
+    overflow: hidden;
+    background-color: $cyan;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    @include transition;
+    
+    .equ  {
+      display: block;
+      width: 100%;
+      @include transition
+    }
+
+    .view {
+      visibility: hidden;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include transition;
+    }
+
+    &:hover {
+      cursor: pointer;
+      .view {
+        visibility: visible;
+      }
+      .equ {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &-title {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    color: $white;
+    margin-bottom: 12px;
+    @include transition;
+
+    &:hover {
+      color: $cyan;
+      cursor: pointer;
+    }
+  }
+
+  &-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $veryDarkBlueLine;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+
+    img {
+      margin-right: 7px;
+    }
+  }
+
+  &-amount {
+    display: flex;
+    align-items: center;
+
+    p {
+      font-weight: 600;
+      color: $cyan;
+    }
+  }
+
+  &-days-left {
+    display: flex;
+    align-items: center;
+
+  }
+
+  &-creator {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 33px;
+      height: 33px;
+      border-radius: 50%;
+      border: 1px solid $white;
+      margin-right: 16px;
+    }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 300;
+
+      span {
+        color: $white;
+        @include transition;
+        
+        &:hover {
+          color: $cyan;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
